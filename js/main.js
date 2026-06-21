@@ -51,19 +51,7 @@
     // no mouse interaction on the stage / spinning badge (by request)
   }
 
-  /* Menu intro dish: auto-cycle through all dish images (crossfade) */
-  const menuDish = document.getElementById("menuDish");
-  if (menuDish && menuDish.dataset.images && !reduce) {
-    const imgs = menuDish.dataset.images.split(",").map(s => s.trim()).filter(Boolean);
-    // preload
-    imgs.forEach(s => { const i = new Image(); i.src = s; });
-    let k = 0;
-    setInterval(() => {
-      k = (k + 1) % imgs.length;
-      menuDish.classList.add("swap");
-      setTimeout(() => { menuDish.onload = () => menuDish.classList.remove("swap"); menuDish.src = imgs[k]; }, 320);
-    }, 2200);
-  }
+  /* Menu hero dish is scroll-driven — handled in the GSAP/ScrollTrigger section below */
 
   /* Intro */
   const intro = document.querySelector(".intro");
@@ -167,6 +155,28 @@
   gsap.utils.toArray(".cta-dish").forEach((d, k) => {
     gsap.to(d, { yPercent: k ? -22 : 22, rotation: k ? 24 : -22, ease: "none", scrollTrigger: { trigger: ".cta-band", start: "top bottom", end: "bottom top", scrub: 1 } });
   });
+
+  /* Menu hero: plate stays, dish rotates through dishes on scroll (one visible at a time) */
+  const menuStage = document.getElementById("menuStage");
+  const menuDish = document.getElementById("menuDish");
+  if (menuStage && menuDish && menuDish.dataset.images) {
+    const imgs = menuDish.dataset.images.split(",").map(s => s.trim()).filter(Boolean);
+    imgs.forEach(s => { const i = new Image(); i.src = s; });
+    let cur = 0;
+    const show = idx => {
+      if (idx === cur) return; cur = idx;
+      gsap.timeline()
+        .to(menuDish, { rotationY: 90, duration: .22, ease: "power2.in", onComplete: () => { menuDish.src = imgs[idx]; } })
+        .set(menuDish, { rotationY: -90 })
+        .to(menuDish, { rotationY: 0, duration: .4, ease: "power3.out" });
+    };
+    ScrollTrigger.create({
+      trigger: ".menu-split", start: "top 45%", end: "bottom 65%",
+      onUpdate: self => show(Math.min(imgs.length - 1, Math.floor(self.progress * imgs.length)))
+    });
+    const ring = menuStage.querySelector(".stage__ring");
+    if (ring) gsap.to(ring, { rotation: 360, duration: 45, ease: "none", repeat: -1 });
+  }
 
   ScrollTrigger.refresh();
 })();
