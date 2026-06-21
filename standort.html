@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Standort &amp; Kontakt · ECKSTÜCK Leberkäse Bistro Zürich</title>
+<meta name="description" content="So findsch üs: ECKSTÜCK Leberkäse Bistro bi Züri. Öffnigszyte, Adresse, Kontakt und Reservation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/logo.png">
+</head>
+<body>
+
+<div class="cursor"></div>
+<div class="progress"></div>
+<div class="intro" aria-hidden="true"><div class="intro__logo">ECKSTÜCK</div><div class="intro__count">0</div></div>
+
+<nav class="nav">
+  <a class="brand" href="index.html"><span class="dot"></span> ECKSTÜCK</a>
+  <div class="nav-links">
+    <a href="index.html">Start</a>
+    <a href="menu.html">Menü</a>
+    <a href="ueber-uns.html">Über üs</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="standort.html" class="active">Standort</a>
+    <a class="btn nav-cta" href="#reservation"><span>Reserviere <span class="arrow">↗</span></span></a>
+  </div>
+  <button class="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="section menu-hero wrap" style="position:relative">
+  <div class="side-word" aria-hidden="true"><span>ECKSTÜCK</span></div>
+  <span class="kicker" data-reveal>So findsch üs</span>
+  <h1 data-reveal data-delay="1" style="font-size:clamp(3rem,9vw,7rem); margin:.4rem 0 1rem">Standort</h1>
+  <p data-reveal data-delay="2" style="max-width:48ch; color:var(--cream-2)">Mitte vo Züri, gad am Bahnhof. Chum verbi zum Znüni, Zmittag oder eifach so.</p>
+</section>
+
+<section class="section wrap" style="padding-top:1rem">
+  <div class="info-grid">
+    <div data-reveal>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem); margin-bottom:1.4rem">Öffnigszyte</h2>
+      <table class="hours">
+        <tr><td>Mäntig</td><td>07:00 – 19:00</td></tr>
+        <tr><td>Zischtig</td><td>07:00 – 19:00</td></tr>
+        <tr><td>Mittwuch</td><td>07:00 – 19:00</td></tr>
+        <tr><td>Donschtig</td><td>07:00 – 20:00</td></tr>
+        <tr><td>Friitig</td><td>07:00 – 21:00</td></tr>
+        <tr><td>Samschtig</td><td>08:00 – 21:00</td></tr>
+        <tr><td>Sunntig</td><td>Gschlosse</td></tr>
+      </table>
+
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem); margin:2.5rem 0 1.2rem">Kontakt</h2>
+      <div class="contact-line">📍 <span><b>ECKSTÜCK</b> · Bahnhofstrasse 1, 8001 Züri</span></div>
+      <div class="contact-line">📞 <a href="tel:+41441234567"><b>+41 44 123 45 67</b></a></div>
+      <div class="contact-line">✉️ <a href="mailto:gruezi@eckstueck.ch"><b>gruezi@eckstueck.ch</b></a></div>
+      <div class="contact-line">📷 <a href="#"><b>@eckstueck.zueri</b></a></div>
+    </div>
+
+    <div data-reveal data-delay="1" style="display:flex; flex-direction:column; gap:1.2rem">
+      <iframe class="mapframe" title="Karte ECKSTÜCK Zürich" loading="lazy" allowfullscreen
+        src="https://www.openstreetmap.org/export/embed.html?bbox=8.535%2C47.371%2C8.545%2C47.379&layer=mapnik&marker=47.375%2C8.540"></iframe>
+      <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Bahnhofstrasse+1+8001+Z%C3%BCrich" target="_blank" rel="noopener"><span>In Google Maps öffne <span class="arrow">↗</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Reservation -->
+<section class="section wrap" id="reservation">
+  <div class="cta-band">
+    <img class="cta-dish l" src="assets/cut-brezn.png" alt="">
+    <img class="cta-dish r" src="assets/cut-teller.png" alt="">
+    <span class="kicker" style="color:var(--gold-2)">Reservation</span>
+    <h2>Tisch reserviere</h2>
+    <p>Für grösseri Gruppe oder es spezielles Znacht: rüef üs a oder schrib üs es Mail — mir richted alles parat.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap">
+      <a class="btn" href="tel:+41441234567"><span>📞 Aalüte</span></a>
+      <a class="btn btn--ghost" href="mailto:gruezi@eckstueck.ch?subject=Reservation%20ECKST%C3%9CCK"><span>✉️ Mail schriibe</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div><p class="big">S'beste Stück findsch bi üs.</p><p style="color:var(--cream-2); margin-top:1rem; max-width:30ch">ECKSTÜCK Leberkäse Bistro — handgmacht bi Züri.</p></div>
+      <div><h4>Navigation</h4><a href="index.html">Start</a><a href="menu.html">Menü</a><a href="ueber-uns.html">Über üs</a><a href="galerie.html">Galerie</a><a href="standort.html">Standort</a></div>
+      <div><h4>Kontakt</h4><a href="tel:+41441234567">+41 44 123 45 67</a><a href="mailto:gruezi@eckstueck.ch">gruezi@eckstueck.ch</a><a href="standort.html">Bahnhofstrasse 1, 8001 Züri</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 ECKSTÜCK · Leberkäse Bistro</span><span>Mit Liebi gmacht bi Züri 🟡</span></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

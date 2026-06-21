@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menü · ECKSTÜCK Leberkäse Bistro Zürich</title>
+<meta name="description" content="Entdeck üses Menü in Bilder: Leberkäs-Semmel, Eckstück, warmi Teller, Brezn und meh. Jede Tag frisch bache.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/logo.png">
+</head>
+<body class="page-menu">
+
+<div class="cursor"></div>
+<div class="progress"></div>
+<div class="intro" aria-hidden="true"><div class="intro__logo">ECKSTÜCK</div><div class="intro__count">0</div></div>
+
+<nav class="nav">
+  <a class="brand" href="index.html"><span class="dot"></span> ECKSTÜCK</a>
+  <div class="nav-links">
+    <a href="index.html">Start</a>
+    <a href="menu.html" class="active">Menü</a>
+    <a href="ueber-uns.html">Über üs</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="standort.html">Standort</a>
+    <a class="btn nav-cta" href="standort.html"><span>Reserviere <span class="arrow">↗</span></span></a>
+  </div>
+  <button class="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- INTRO -->
+<section class="wrap" style="position:relative">
+  <div class="side-word" aria-hidden="true"><span>ECKSTÜCK</span></div>
+  <div class="menu2-intro">
+    <div>
+      <div class="head">
+        <div class="bar"></div>
+        <h1 data-reveal>Entdeck<br>üses Menü</h1>
+      </div>
+      <p class="lead" data-reveal data-delay="1">Frisch bache, jede Morge ab 6 Uhr. Vom goldige Leberkäs bis zur frische Brezn — ehrlichi Zuetate, handgmacht, ohni Schnickschnack.</p>
+      <p class="sub" data-reveal data-delay="2">Priise i Schwiizer Franke, inkl. MwSt. <span class="serif-italic" style="color:var(--gold)">S'Eckstück isch meischtens als Erschts weg.</span></p>
+      <a class="btn" href="standort.html" data-reveal data-delay="2"><span>Tisch reserviere <span class="arrow">↗</span></span></a>
+    </div>
+    <div class="menu2-dish" data-reveal>
+      <img id="menuDish" src="assets/cut-loaf.png" alt="Üsi Spezialitäte"
+           data-images="assets/cut-loaf.png,assets/cut-semmel.png,assets/cut-teller.png,assets/cut-curry.png,assets/cut-cheese.png,assets/cut-brezn.png,assets/cut-strudel.png,assets/cut-beer.png">
+      <div class="badge-spin">
+        <svg viewBox="0 0 100 100"><defs><path id="mcircle" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs>
+          <text font-family="Inter" font-size="10.5" letter-spacing="2.2" fill="#bb7d23"><textPath href="#mcircle">EN GUETE · FRISCH BACHE · </textPath></text>
+        </svg>
+        <div class="core">🥨</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU OFFER (only items we have photos of) -->
+<section class="section wrap" style="padding-top:2rem">
+
+  <div class="menu-group">
+    <div class="menu-group__title" data-reveal><h3>Im Weggli</h3><span class="rule"></span></div>
+    <div class="menu-item" data-reveal>
+      <img class="menu-item__img" src="assets/cut-loaf.png" alt="Eckstück-Semmel">
+      <div><div class="menu-item__name">Eckstück-Semmel <small>Signature</small></div><div class="menu-item__desc">Die knusprig, karamellisierti Egge im warme Weggli, mit süessem Senf. Nur in beschränkter Zahl.</div></div>
+      <span class="menu-item__price">CHF 7.50</span>
+    </div>
+    <div class="menu-item" data-reveal>
+      <img class="menu-item__img" src="assets/cut-semmel.png" alt="Leberkäs-Semmel">
+      <div><div class="menu-item__name">Leberkäs-Semmel <small>Beliebt</small></div><div class="menu-item__desc">Warmi, dicki Schiibe Leberkäs im frische Weggli, mit süessem oder scharfem Senf.</div></div>
+      <span class="menu-item__price">CHF 6.50</span>
+    </div>
+    <div class="menu-item" data-reveal>
+      <img class="menu-item__img" src="assets/cut-cheese.png" alt="Chäs-Leberkäs">
+      <div><div class="menu-item__name">Chäs-Leberkäs-Semmel</div><div class="menu-item__desc">Mit feinem Schwiizer Bergchäs durchzoge — zieht Fäde, macht glücklich.</div></div>
+      <span class="menu-item__price">CHF 7.00</span>
+    </div>
+  </div>
+
+  <div class="menu-group">
+    <div class="menu-group__title" data-reveal><h3>Vom warme Teller</h3><span class="rule"></span></div>
+    <div class="menu-item" data-reveal>
+      <img class="menu-item__img" src="assets/cut-teller.png" alt="Leberkäs-Teller">
+      <div><div class="menu-item__name">Leberkäs mit Spiegelei &amp; Bratkartoffle</div><div class="menu-item__desc">Zwei dicki Schiibe, es goldigs Spiegelei und hausgmachti Bratkartoffle. De Klassiker.</div></div>
+      <span class="menu-item__price">CHF 16.50</span>
+    </div>
+    <div class="menu-item" data-reveal>
+      <img class="menu-item__img" src="assets/cut-curry.png" alt="Curry-Leberkäs">
+      <div><div class="menu-item__name">Curry-Leberkäs mit Pommes</div><div class="menu-item__desc">Gröschteti Leberkäs-Würfeli, hausgmachti Currysauce und knusprigi Pommes.</div></div>
+      <span class="menu-item__price">CHF 15.50</span>
+    </div>
+  </div>
+
+  <div class="menu-group">
+    <div class="menu-group__title" data-reveal><h3>Znüni &amp; Süesses</h3><span class="rule"></span></div>
+    <div class="menu-item" data-reveal>
+      <img class="menu-item__img" src="assets/cut-brezn.png" alt="Frischi Brezn">
+      <div><div class="menu-item__name">Frischi Brezn</div><div class="menu-item__desc">Täglich frisch gschlunge, mit grobem Salz. Mit Butter +CHF 1.00.</div></div>
+      <span class="menu-item__price">CHF 3.50</span>
+    </div>
+    <div class="menu-item" data-reveal>
+      <img class="menu-item__img" src="assets/cut-strudel.png" alt="Apfelstrudel">
+      <div><div class="menu-item__name">Grossmuetters Apfelstrudel</div><div class="menu-item__desc">Warm serviert, mit eme Tüpfli Vanillesauce. Wie deheim.</div></div>
+      <span class="menu-item__price">CHF 6.50</span>
+    </div>
+  </div>
+
+  <div class="menu-group">
+    <div class="menu-group__title" data-reveal><h3>Getränk</h3><span class="rule"></span></div>
+    <div class="menu-item" data-reveal>
+      <img class="menu-item__img" src="assets/cut-beer.png" alt="Craft-Bier">
+      <div><div class="menu-item__name">Schwiizer Craft-Bier vom Fass</div><div class="menu-item__desc">Wechselndi lokali Brauerei — frag s'Team, was grad am Hahne isch.</div></div>
+      <span class="menu-item__price">CHF 5.50</span>
+    </div>
+  </div>
+
+</section>
+
+<section class="section wrap">
+  <div class="cta-band">
+    <img class="cta-dish l" src="assets/cut-teller.png" alt="">
+    <img class="cta-dish r" src="assets/cut-strudel.png" alt="">
+    <h2>Mer freued üs uf di.</h2>
+    <p>Take-away oder gmüetlich da bliibe — chum verbi und probier s'Eckstück.</p>
+    <a class="btn" href="standort.html"><span>So findsch üs <span class="arrow">↗</span></span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div><p class="big">S'beste Stück findsch bi üs.</p><p style="color:var(--ink-2);margin-top:1rem;max-width:30ch">ECKSTÜCK Leberkäse Bistro — handgmacht bi Züri.</p></div>
+      <div><h4>Navigation</h4><a href="index.html">Start</a><a href="menu.html">Menü</a><a href="ueber-uns.html">Über üs</a><a href="galerie.html">Galerie</a><a href="standort.html">Standort</a></div>
+      <div><h4>Kontakt</h4><a href="tel:+41441234567">+41 44 123 45 67</a><a href="mailto:gruezi@eckstueck.ch">gruezi@eckstueck.ch</a><a href="standort.html">Bahnhofstrasse 1, 8001 Züri</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 ECKSTÜCK · Leberkäse Bistro</span><span>Mit Liebi gmacht bi Züri 🟡</span></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galerie · ECKSTÜCK Leberkäse Bistro Zürich</title>
+<meta name="description" content="Bilder vom ECKSTÜCK — frische Leberkäs, knusprigi Eggä, üses Bistro bi Züri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/logo.png">
+</head>
+<body>
+
+<div class="cursor"></div>
+<div class="progress"></div>
+<div class="intro" aria-hidden="true"><div class="intro__logo">ECKSTÜCK</div><div class="intro__count">0</div></div>
+
+<nav class="nav">
+  <a class="brand" href="index.html"><span class="dot"></span> ECKSTÜCK</a>
+  <div class="nav-links">
+    <a href="index.html">Start</a>
+    <a href="menu.html">Menü</a>
+    <a href="ueber-uns.html">Über üs</a>
+    <a href="galerie.html" class="active">Galerie</a>
+    <a href="standort.html">Standort</a>
+    <a class="btn nav-cta" href="standort.html"><span>Reserviere <span class="arrow">↗</span></span></a>
+  </div>
+  <button class="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="section menu-hero wrap" style="position:relative">
+  <div class="side-word" aria-hidden="true"><span>ECKSTÜCK</span></div>
+  <span class="kicker" data-reveal>Lueg's a</span>
+  <h1 data-reveal data-delay="1" style="font-size:clamp(3rem,9vw,7rem); margin:.4rem 0 1rem">Galerie</h1>
+  <p data-reveal data-delay="2" style="max-width:46ch; color:var(--cream-2)">Warnig: Macht hungrig. Fahr über d'Bilder für meh.</p>
+</section>
+
+<section class="section wrap" style="padding-top:0">
+  <div class="gallery">
+    <figure data-reveal><img src="assets/hero.jpg" alt="Frisch gebackener Leberkäs"><figcaption>Frisch us em Ofe</figcaption></figure>
+    <figure data-reveal><img src="assets/eckstueck.jpg" alt="Knuspriges Eckstück"><figcaption>S'Eckstück — die knusprig Egge</figcaption></figure>
+    <figure data-reveal><img src="assets/semmel.jpg" alt="Leberkäs-Semmel"><figcaption>Im warme Weggli</figcaption></figure>
+    <figure data-reveal><img src="assets/spread.jpg" alt="Gedeckter Tisch"><figcaption>Mit Brezn &amp; Senf</figcaption></figure>
+    <figure data-reveal><img src="assets/interior.jpg" alt="S'Bistro vo inne"><figcaption>Üse Lade bi Züri</figcaption></figure>
+    <figure data-reveal><img src="assets/hero2.jpg" alt="Leberkäs Detail"><figcaption>Aussen rösch, innen zart</figcaption></figure>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="cta-band">
+    <img class="cta-dish l" src="assets/cut-semmel.png" alt="">
+    <img class="cta-dish r" src="assets/cut-loaf.png" alt="">
+    <h2>Lieber live als uf em Foto.</h2>
+    <p>Chum verbi und gniess s'Eckstück frisch — d'Bilder mached eh nur Hunger.</p>
+    <a class="btn" href="standort.html"><span>So findsch üs <span class="arrow">↗</span></span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div><p class="big">S'beste Stück findsch bi üs.</p><p style="color:var(--cream-2); margin-top:1rem; max-width:30ch">ECKSTÜCK Leberkäse Bistro — handgmacht bi Züri.</p></div>
+      <div><h4>Navigation</h4><a href="index.html">Start</a><a href="menu.html">Menü</a><a href="ueber-uns.html">Über üs</a><a href="galerie.html">Galerie</a><a href="standort.html">Standort</a></div>
+      <div><h4>Kontakt</h4><a href="tel:+41441234567">+41 44 123 45 67</a><a href="mailto:gruezi@eckstueck.ch">gruezi@eckstueck.ch</a><a href="standort.html">Bahnhofstrasse 1, 8001 Züri</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 ECKSTÜCK · Leberkäse Bistro</span><span>Mit Liebi gmacht bi Züri 🟡</span></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
