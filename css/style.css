@@ -213,7 +213,7 @@ body.page-menu{--paper:#f8f5ef;background:var(--paper)}
 .menu2-intro .sub .serif-italic{text-transform:none;letter-spacing:0;font-size:1.05rem}
 .menu2-intro .btn{margin-top:2rem}
 
-.menu2-dish{position:relative;display:grid;place-items:center;aspect-ratio:1;max-width:520px;margin-inline:auto;width:100%}
+.menu2-dish{position:relative;display:grid;place-items:center;aspect-ratio:1;max-width:520px;margin-inline:auto;width:100%;perspective:1300px}
 .menu2-dish img{position:relative;width:94%;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 30px 38px rgba(54,38,18,.3));transition:opacity .5s var(--ease)}
 .menu2-dish img.swap{opacity:0}
 .menu2-dish .badge-spin{position:absolute;bottom:4%;right:2%;width:118px;height:118px;z-index:5}
@@ -267,6 +267,20 @@ body.page-menu{--paper:#f8f5ef;background:var(--paper)}
 .dishes--menu .dish .price{font-size:.95rem}
 @media (max-width:980px){.dishes--menu{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:480px){.dishes--menu{grid-template-columns:1fr}}
+
+/* menu: heading + sticky rotating plate + list */
+.menu-head{padding-top:8.5rem;padding-bottom:1rem}
+.menu-head h1{font-size:clamp(2.6rem,6vw,5rem);text-transform:uppercase;letter-spacing:.01em;margin:.3rem 0 1rem}
+.menu-head .lead{max-width:54ch;color:var(--ink-2);font-size:1.1rem}
+.menu-split{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(2rem,5vw,4.5rem);align-items:start;padding-bottom:clamp(3rem,6vw,5rem)}
+.menu-stagewrap{position:sticky;top:5.5rem}
+.menu-stagewrap .stage{max-width:430px;margin:0 auto;perspective:1300px}
+.menu-stagewrap .stage__dish{transition:none}
+@media (max-width:860px){
+  .menu-split{grid-template-columns:1fr;gap:1rem}
+  .menu-stagewrap{position:static;margin-bottom:1.5rem}
+  .menu-stagewrap .stage{max-width:300px}
+}
 
 /* ---------- Gallery ---------- */
 .gallery{columns:3;column-gap:1rem}
@@ -335,7 +349,10 @@ body.page-menu{--paper:#f8f5ef;background:var(--paper)}
 .no-gsap [data-reveal].in{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1s var(--ease)}
 .progress{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:200;width:0}
 .intro{position:fixed;inset:0;z-index:300;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.intro__logo{font-family:var(--display);font-size:clamp(2.4rem,8vw,5rem);color:var(--ink)}
+.intro__brand{text-align:center;display:flex;flex-direction:column;align-items:center}
+.intro__mark{filter:drop-shadow(0 10px 18px rgba(54,38,18,.18));animation:introPulse 1.6s var(--ease) infinite alternate}
+@keyframes introPulse{from{transform:translateY(0)}to{transform:translateY(-8px)}}
+.intro__logo{font-family:var(--display);font-size:clamp(2.4rem,8vw,5rem);color:var(--ink);letter-spacing:.02em}
 .intro__count{position:absolute;bottom:2rem;right:2rem;font-family:var(--display);font-size:clamp(2rem,6vw,4rem);color:var(--gold)}
 /* spinning badge / hero stage must not react to the mouse */
 .stage,.badge-spin{pointer-events:none}
