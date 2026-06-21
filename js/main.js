@@ -119,9 +119,9 @@
     gsap.fromTo(img, { scale: 1 }, { scale: 1.55, ease: "none", scrollTrigger: { trigger: img.closest("section") || img, start: "top 65%", end: "bottom top", scrub: 1 } });
   });
 
-  /* Full-bleed pinned food zoom transition (Über üs) */
+  /* Full-bleed pinned food zoom transition (Über üs) — desktop only (pinning is janky on mobile) */
   const fz = document.querySelector(".foodzoom");
-  if (fz) {
+  if (fz && window.innerWidth > 760) {
     const img = fz.querySelector(".foodzoom__img");
     const cap = fz.querySelector(".foodzoom__cap");
     const kick = fz.querySelector(".foodzoom__kicker");
