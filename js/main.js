@@ -30,7 +30,7 @@
     addEventListener("mousemove", e => { x = e.clientX; y = e.clientY; });
     const loop = () => { cx += (x - cx) * .18; cy += (y - cy) * .18; cursor.style.transform = `translate(${cx}px,${cy}px) translate(-50%,-50%)`; requestAnimationFrame(loop); };
     loop();
-    document.querySelectorAll("a,button,.dish,.split__media,.gallery figure,.stage").forEach(el => {
+    document.querySelectorAll("a,button,.dish,.gallery figure").forEach(el => {
       el.addEventListener("mouseenter", () => cursor.classList.add("big"));
       el.addEventListener("mouseleave", () => cursor.classList.remove("big"));
     });
@@ -48,16 +48,7 @@
         dishes[i].classList.add("is-active");
       }, 2800);
     }
-    // subtle pointer tilt
-    if (window.matchMedia("(hover:hover)").matches) {
-      stage.addEventListener("mousemove", e => {
-        const r = stage.getBoundingClientRect();
-        const dx = (e.clientX - r.left - r.width / 2) / r.width;
-        const dy = (e.clientY - r.top - r.height / 2) / r.height;
-        stage.style.setProperty("transform", `perspective(900px) rotateY(${dx * 8}deg) rotateX(${-dy * 8}deg)`);
-      });
-      stage.addEventListener("mouseleave", () => stage.style.removeProperty("transform"));
-    }
+    // no mouse interaction on the stage / spinning badge (by request)
   }
 
   /* Menu intro dish: auto-cycle through all dish images (crossfade) */
